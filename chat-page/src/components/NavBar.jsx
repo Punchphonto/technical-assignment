@@ -9,7 +9,7 @@ const NavBar = () => {
     return <Navbar bg="dark" className="mb-4" style={{ height: "3.75rem" }}>
         <Container>
             <h2>
-                <Link to="/" className="link-light text-decoration-none">Realtime-App</Link>
+                <Link to="/" className="link-light text-decoration-none">Realtime-Chat</Link>
             </h2>
             {user && <span className="text-warning">Welcome {user?.name}</span>}
             <Nav>

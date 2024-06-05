@@ -69,7 +69,8 @@ body{
 }
 
 .messages-box {
-  height: 85vh;
+  height: auto;
+  margin-bottom: 3vh ;
 }
 
 /* Chat Header */

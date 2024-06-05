@@ -21,7 +21,7 @@ const Chat = () => {
         {userChats?.lenght < 1 ? null : (
             <Container>
                 <Row>
-                    <Col className="col-4">
+                    <Col lg="4" sm="12">
                         <Stack className="messages-box flex-grow-0 pe-3" gap={3}>
                             {isUserChatsLoading && <p>Loading ..</p>}
                             {userChats?.map((chat, index) => {
@@ -33,7 +33,7 @@ const Chat = () => {
                             })}
                         </Stack>
                     </Col>
-                    <Col className="col-8">
+                    <Col lg="8" sm="12" className="gab-btween">
                         <ChatBox />
                     </Col>
                 </Row>
