@@ -26,7 +26,7 @@ To run this project locally, follow these steps:
    - Navigate to the `socket` directory and run `npm install`.
 
 4. Run the server:
-    - Navigate to the `server` directory and run `nodemon` in not work run npm install -g nodemon and run `nodemon` again.
+    - Navigate to the `server` directory and run `nodemon`, if not working (in window WSL) run `npm install -g nodemon` and run `nodemon` again.
 5. Run the socket server:
     - Navigate to the `socket` directory and run `nodemon`.
 7. Run the client:
