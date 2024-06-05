@@ -14,16 +14,11 @@ app.use("/api/users", userRoute);
 app.use("/api/chats", chatRoute);
 app.use("/api/messages", messageRoute);
 
-app.get("/", (req, res) => {
-    res.send("hello word")
-})
-
-
 const port = process.env.PORT
 const uri = process.env.ATLAS_URI;
 
 app.listen(port, (req, res) => {
-    console.log(`hello word ${port}`);
+    console.log(`http://localhost:${port}`);
 });
 
 mongoose.connect(uri, {

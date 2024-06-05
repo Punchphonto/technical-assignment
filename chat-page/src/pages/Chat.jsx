@@ -7,7 +7,6 @@ import PotentialChat from "../components/chat/PotentialChat";
 import ChatBox from "../components/chat/ChatBox";
 
 const Chat = () => {
-
     const { user } = useContext(AuthContext)
     const { userChats, isUserChatsLoading, userChatsError, updateCurrentChat } = useContext(ChatContext)
     return <Container>
@@ -39,7 +38,6 @@ const Chat = () => {
                 </Row>
             </Container>
         )}
-
     </Container >
 
 }

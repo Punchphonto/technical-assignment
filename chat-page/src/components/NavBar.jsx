@@ -8,16 +8,16 @@ const NavBar = () => {
     const { user, logout } = useContext(AuthContext)
     return <Navbar bg="dark" className="mb-4" style={{ height: "3.75rem" }}>
         <Container>
-            <h2>
+            <h3>
                 <Link to="/" className="link-light text-decoration-none">Realtime-Chat</Link>
-            </h2>
+            </h3>
             {user && <span className="text-warning">Welcome {user?.name}</span>}
             <Nav>
                 <Stack direction="horizontal" gap={3}>
                     {
                         user && (<>
                             <Link
-                                onClick={() => logout()} to="/login" className="link-light text-decoration-none">Logout</Link>
+                                onClick={() => logout()} to="/login" className="link-light text-decoration-none btn btn-danger">Logout</Link>
                         </>)
                     }
 
