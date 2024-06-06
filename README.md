@@ -15,21 +15,22 @@
 - Messages are displayed in a chronological order
 - Emoji picker is also integrated.
 
+## Prerequisites
+1. require node vsersion 18.17.0
+2. nodemon
 
 ## Getting Started
-
 To run this project locally, follow these steps:
 1. Clone the repository.
-2. require node vsersion 18.17.0
-3. Install the dependencies:
+2. Install the dependencies:
    - Navigate to the `chat-page` directory and run `npm install`.
    - Navigate to the `server` directory and run `npm install`.
    - Navigate to the `socket` directory and run `npm install`.
 
-4. Run the server:
+3. Run the server:
     - Navigate to the `server` directory and run `nodemon`, if not working (in window WSL) run `npm install -g nodemon` and run `nodemon` again.
-5. Run the socket server:
+4. Run the socket server:
     - Navigate to the `socket` directory and run `nodemon`.
-7. Run the client:
+5. Run the client:
     - Navigate to the `chat-page` directory and run `npm run dev`.
-8. The application will be accessible at `http://localhost:5173`.
+6. The application will be accessible at `http://localhost:5173`.
