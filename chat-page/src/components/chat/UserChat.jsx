@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import { Container, Nav, Navbar, Stack } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Stack, Badge } from "react-bootstrap";
 import { useFetchRecipientUser } from "../../hooks/useFetchRecipient"
 import { ChatContext } from "../../context/ChatContext";
 import profile from "../../assets/profile.png"
@@ -24,15 +23,10 @@ const UserChat = ({ chat, user }) => {
             </div>
             <div className="text-content">
                 <div className="name">{recipientUser?.name} </div>
-                <div className="text">Text Messege</div>
             </div>
         </div>
         <div className="d-flex flex-column align-items-end">
-            <div className="date">
-                11/12/2022
-            </div>
-            <div className="this-user-notifications">2</div>
-            <span className={isOnline ? "user-online" : ""}></span>
+            {isOnline ? <Badge bg="success">online</Badge> : <></>}
         </div>
     </Stack>
 }

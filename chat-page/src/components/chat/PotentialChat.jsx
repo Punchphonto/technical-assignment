@@ -1,9 +1,5 @@
 
 import { useContext } from "react";
-import { Container, Nav, Navbar, Stack } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { useFetchRecipientUser } from "../../hooks/useFetchRecipient"
-import profile from "../../assets/profile.png"
 import { ChatContext } from "../../context/ChatContext";
 import { AuthContext } from "../../context/AuthContext";
 

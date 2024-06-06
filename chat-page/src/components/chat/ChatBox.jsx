@@ -1,21 +1,22 @@
 
-import { useContext, useState } from "react";
-import { Container, Nav, Navbar, Stack } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useContext, useEffect, useRef, useState } from "react";
+import { Stack } from "react-bootstrap";
 import { useFetchRecipientUser } from "../../hooks/useFetchRecipient"
-import profile from "../../assets/profile.png"
 import { ChatContext } from "../../context/ChatContext";
 import { AuthContext } from "../../context/AuthContext";
 import moment from "moment";
 import InputEmoji from "react-input-emoji"
-
-
 
 const ChatBox = () => {
     const { user } = useContext(AuthContext)
     const { currentChat, messages, isMessagesLoading, sendTextMessage } = useContext(ChatContext);
     const { recipientUser } = useFetchRecipientUser(currentChat, user)
     const [textMessage, setTextMessage] = useState("");
+    const scorll = useRef();
+
+    useEffect(() => {
+        scorll.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages])
 
     if (!recipientUser) {
         return (
@@ -41,7 +42,9 @@ const ChatBox = () => {
             <Stack className="messages" gap={3}>
                 {messages &&
                     messages.map((message, index) =>
-                        <Stack key={index} className={`${message?.senderId === user?._id ? "message self align-self-end flex-grow-0" : "message align-self-start flex-grow-0"}`}>
+                        <Stack key={index}
+                            className={`${message?.senderId === user?._id ? "message self align-self-end flex-grow-0" : "message align-self-start flex-grow-0"}`}
+                            ref={scorll}>
                             <span>{message.text}</span>
                             <span className="message-footer">{moment(message.createdAt).calendar()}</span>
                         </Stack>

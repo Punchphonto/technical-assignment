@@ -48,7 +48,6 @@ export const ChatContextProvider = ({ children, user }) => {
             return;
         }
         const recipientId = currentChat?.members.find((id) => id !== user?._id)
-        console.log(newMessage);
         socket.emit("sendMessage", { ...newMessage, recipientId })
 
     }, [newMessage]);
