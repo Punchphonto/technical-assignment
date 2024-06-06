@@ -1,4 +1,5 @@
 # technical-assignment
+## Real-time chat
 
 ## Technologies Used
 - React and React Boostrap for the frontend
