@@ -34,3 +34,8 @@ To run this project locally, follow these steps:
 5. Run the client:
     - Navigate to the `chat-page` directory and run `npm run dev`.
 6. The application will be accessible at `http://localhost:5173`.
+7. I have added test user for test but, you can register new user in regsiter menu.
+    - user 1  username : `solo@gmail.com` password: `12345678`
+    - user 2  username : `lufy@gmail.com` password: `12345678`
+8. Try to login between user in different browser.
+9. Send message and see result.
