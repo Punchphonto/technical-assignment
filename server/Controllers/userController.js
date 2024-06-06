@@ -80,12 +80,10 @@ const getUsers = async (req, res) => {
     }
 }
 
-
 const getUserById = async (req, res) => {
     const userId = req.params.userId;
     if (mongoose.Types.ObjectId.isValid(userId)) {
         const user = await userModel.findById(userId)
-        console.log(user);
         if (user) {
             res.status(200).json(user);
         } else {

@@ -11,6 +11,8 @@ const PotentialChat = () => {
     return <>
         <div className="all-users">
             {potentialChats && potentialChats.map((u, index) => {
+                if (user._id === u._id) return;
+
                 return (
                     <div className="single-user" key={index} onClick={() => createChat(user._id, u._id)}>
                         {u.name}
